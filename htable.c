@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "ht_funcs.h"
-#include<stdlib.h>
-#include<string.h>
+#include <stdlib.h>
+#include <string.h>
 int main(int argvc, char *argv[]){
 
     FILE *file = NULL;

@@ -1,16 +1,25 @@
 CC = gcc
 CFLAGS = -Wall -ansi -pedantic -g
-MAIN = htable
-OBJS = htable.o ht_funcs.o
+MAIN = htable hencode hdecode
+OBJS = hencode.o hdecode.o htable.o
+
 all: $(MAIN)
 
-$(MAIN): $(OBJS) htable.c ht_funcs.c
-	$(CC) $(CFLAGS) $(OBJS) -o $(MAIN)
+hencode: hencode.o
+	$(CC) $(CFLAGS) -o hencode hencode.o
+hencode.o: hencode.c
+	$(CC) $(CFLAGS) -c hencode.c
 
+hdecode: hdecode.o
+	$(CC) $(CFLAGS) -o hdecode hdecode.o
+hdecode.o: hdecode.c
+	$(CC) $(CFLAGS) -o hdecode.c
+htable: htable.o
+	$(CC) $(CFLAGS) -o htable htable.o
 htable.o: htable.c
-	$(CC) $(CFLAGS) -c htable.c
-ht_funcs.o: ht_funcs.c
-	$(CC) $(CFLAGS) -c ht_funcs.c
+	$(CC) $(CFLAGS) -o htable.c
 
 clean:
 	rm *.o $(MAIN) core
+
+
