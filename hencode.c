@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ht_funcs.c"
+#include "ht_funcs.h"
 
 #define CHAR_RANGE  257
 #define FAKE_EOF    256
