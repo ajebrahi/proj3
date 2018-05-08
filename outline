@@ -1,0 +1,36 @@
+Alex Ebrahimi (ajebrahi)
+Section 11
+
+Logic
+
+	count frequencies
+	make linked list
+	make binary tree nodes by traversing linked list
+	make hash table of codes with char's as keys
+
+	use header to decode
+
+Data Structures
+
+	node
+        typedef struct Node{
+    		int letter;
+                int frequency;
+		struct Node *next;
+	        struct Node *left;
+                struct Node *right;
+
+	} Node;
+
+Algorithms
+Methods
+
+	linkedNode *make_linked(char freq[]);
+	linkedNode *insert_sort(linkedNode *head, char c, int freq);
+	void encode(char *chars[], Node *root, char *code);
+	void decode(char *chars[], FILE *file);
+
+Testing
+
+	diff'ing original and decoded
+        diff'ing encoded and original to see how much it was reduced
